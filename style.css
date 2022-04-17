@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+/* ------------------------------------------------------------------------------ */
+/* Custom Props*/
+/* ------------------------------------------------------------------------------ */
+:root {
+  /* colors */
+  --blue-8: 218 44% 22%;
+  --blue-2: 220 15% 55%;
+  --gray-2: 212, 45%, 89%;
+  --white: 0 0% 100%;
+  /* fonts size */
+  --fs-5: 1rem;
+  --fs-6: 1.5rem;
+  --fs-7: 2rem;
+  /* Font family */
+  --ff-sans: "Outfit", sans-serif;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* reset */
+/* ------------------------------------------------------------------------------ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------------------ */
+/* General Utils */
+/* ------------------------------------------------------------------------------ */
+.flow > * + * {
+  margin-top: var(--flow-spacer-3, 1rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--spacer-3, 1.5rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacer-3, 1rem);
+}
+
+.container {
+  max-width: 20rem;
+  position: relative;
+  padding: var(--spacer-4, 1.5rem);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Layout */
+/* ------------------------------------------------------------------------------ */
+body {
+  place-content: center;
+  background-color: hsl(var(--gray-2));
+  font-family: var(--ff-sans);
+  font-weight: 400;
+}
+
+.card-container {
+  margin: 1rem;
+  background-color: hsl(var(--white));
+  flex-direction: column;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card-img > img {
+  border-radius: 20px;
+}
+
+.card-content {
+  padding-inline: 30px;
+}
+
+.card-heading {
+  color: hsl(var(--blue-8));
+  font-weight: 700;
+}
+
+.card-description {
+  color: hsl(var(--blue-2));
+  font-size: 15px;
+  padding-block: 10px;
+}
