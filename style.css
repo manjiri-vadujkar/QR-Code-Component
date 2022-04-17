@@ -112,7 +112,7 @@ select {
 }
 
 .container {
-  max-width: 20rem;
+  max-width: 80rem;
   position: relative;
   padding: var(--spacer-4, 1.5rem);
 }
@@ -132,6 +132,7 @@ body {
 }
 
 .card-container {
+  max-width: 20rem;
   margin: 1rem;
   background-color: hsl(var(--white));
   flex-direction: column;
